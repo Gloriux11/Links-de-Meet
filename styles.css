@@ -19,41 +19,41 @@ body{
 }
 .titulo{
     display: flex;
+    flex-wrap: wrap;
     background: #08596a;
     color: #ffffff;
     margin:0px;
-    padding: 30px 555px;
-    align-content: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    justify-content: center;
 }
 .subtitulo{
     color: #08596a;
     width: 100%;
     background-color: rgba(250,250,250,0.5);    
-    display: inline-block;
+    display: flex;
+    width: 112%;
 }
 .subtitulo-izquierda{
-    margin-top: 20px;
-    margin-bottom: 10px;
-    margin-left: 200px;
+    justify-content: left;
+    margin: 20px;
     font-size: 30px;
-    display: inline-block;
+    width: 50%;
 }
 .subtitulo-derecha{
     font-size: 13px;
-    float: right;
+    display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-right: 200px;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-}
-.subtitulo-derecha a{
-    float: right;
+    flex-flow: column;
+    align-items: flex-end;
+    flex-basis: 100%;
 }
 .cursos_fila1 {
     display: grid;
     column-gap: 100px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4,1fr);
     gap: 20px;
     margin: 40px 200px 0px 200px;
     color: #ffffff;
@@ -70,6 +70,7 @@ body{
     display: grid;
     color: #fff;
     margin: 20px;
+    padding: 30px;
 }
 .cursos_fila1 a:hover{
     text-decoration: underline;
@@ -157,19 +158,31 @@ body{
     
     .cursos_fila1{
         grid-template-columns: repeat(1,1fr);
-        margin: 40px 190px 0px 200px;
+        margin: 10px;
+        padding-bottom: 10px;
     }
     .cursos_fila2{
         grid-template-columns: repeat(1,1fr);
-        margin: 40px 190px 0px 200px;
+        margin: 10px;
     }
     .titulo{
-        width: 150%;
         padding: 30px 20px;
-        align-content: center;
+        flex-basis: 100%;
+        font-size: 12px;
+    }
+    .subtitulo{
+        flex-flow: wrap;
+        width: 100%;
+        align-items: center;
+    }
+    .subtitulo-derecha{
+        font-size: 11px;
+        justify-items: center;
+        margin: 20px;
     }
     .subtitulo-izquierda{
-        width: 150%;
-        padding-left: 10px;
+        font-size: 22px;
+        width: 100%;
+        justify-content: center;
     }
 }
